@@ -150,7 +150,7 @@ nlu:
 - intent: pwa
   examples: |
     - Can you brief me about PWA Development?
-    i want to build in pwa
+    - i want to build in pwa
     - PWA Development
     - Progressive Web App
     - pwa
