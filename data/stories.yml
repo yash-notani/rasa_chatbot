@@ -94,6 +94,12 @@ stories:
   - intent: django
   - action: utter_django
 
+- story: ask getstarted
+  steps:
+  - intent: getstarted
+  - action: utter_getstarted
+
+
 - story: ask golang
   steps:
   - intent: golang

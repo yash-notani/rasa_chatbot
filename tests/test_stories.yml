@@ -189,6 +189,14 @@ stories:
       Homepage
     intent: homepage
   - action: utter_homepage
+  
+  
+ - story: ask getstarted
+  steps:
+  - user: |
+      getstarted
+    intent: getstarted
+  - action: utter_getstarted
  
 
  - story: ask inquiry

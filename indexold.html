@@ -14,8 +14,13 @@
     (e.onload = () => {
       window.WebChat.default(
         {
-          customData: { language: "en" },
-          socketUrl: "http://3.7.253.170:5005",
+              selector: "#webchat",
+    initPayload: "/hello",
+    customData: {"language": "en"}, 
+    socketUrl: "http://localhost:5005",
+    socketPath: "/socket.io/",
+    title: "Chatbot",
+    params: {"storage": "session"} 
           // add other props here
         },
         null

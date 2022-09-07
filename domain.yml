@@ -26,6 +26,7 @@ intents:
   - reactjs
   - location
   - officehours
+  - getstarted
   
 responses:
 
@@ -33,6 +34,12 @@ responses:
   utter_greet:
   - text: "Welcome to Tecblic. We provide services like AI/ML, Odoo, Python, Robotic Process, Business Consulting, Business Intelligence, Hire Dedicated Resources, PWA Development, Django, Golang, Flutter, ReactJs."
   
+  utter_getstarted:
+  - text: "Welcome to Tecblic.
+
+
+How can I help you?"
+ 
   utter_team:
   - text: "We have a team of 50-100 developers. If you need more infor mation you can fill the inquiry form on: https://www.tecblic.com/contactus"
 
