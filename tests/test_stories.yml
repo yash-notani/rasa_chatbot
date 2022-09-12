@@ -139,6 +139,14 @@ stories:
     intent: flutter
   - action: utter_flutter
 
+ - story: ask name
+  steps:
+  - user: |
+      divyesh
+    intent: inquiryform
+  - action: utter_name
+
+
  - story: ask reactjs
   steps:
   - user: |

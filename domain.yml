@@ -1,4 +1,6 @@
-version: "3.1"
+config:
+  store_entities_as_slots: false
+
 
 intents:
   - start
@@ -17,7 +19,7 @@ intents:
   - pwa
   - connect
   - homepage
-  - inquiry
+
   - contact
   - team
   - django
@@ -27,7 +29,38 @@ intents:
   - location
   - officehours
   - getstarted
-  
+  - inquiryform
+  - name
+  - number
+  - email
+  - description
+entities:
+  - name
+  - number
+  - email
+  - description
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+  number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: number
+  email:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: email
+  description:
+    type: text 
+    mappings:
+    - type: from_entity
+      entity: description 
+    
 responses:
 
 
@@ -206,6 +239,21 @@ You can visit this link for more information: https://www.tecblic.com/python"
         payload: "/inquiryform"
 
 
+  utter_name:
+    - text: "Please provide your name"
+
+  utter_number:
+    - text: "Please provide your contact no."
+
+  utter_email:
+    - text: "Please provide your Email ID"
+
+  utter_description:
+    - text: "Please provide some description if you want to"
+
+  utter_thanks:
+    - text: "Thanks for providing me the details. Now sit back and relax, you will get a call as soon as possible"
+
   utter_rpa:
   - text: "Rpa is a process of simplifying and automating tasks that require human interference. RPA with the use of a software with artificial intelligence and machine learning capabilities that is stable to handle high volume repetitive tasks. Sorting and short-listing the relevant profile for hr, maintaining records of transactions and even making calculations are some of the many applications of the RPA system.
 
@@ -273,7 +321,7 @@ On which technology you want the web app to be developed?"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
-
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

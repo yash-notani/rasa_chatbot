@@ -74,11 +74,7 @@ stories:
   - intent: homepage
   - action: utter_homepage
   
-- story: ask inquiry
-  steps:
-  - intent: inquiry
-  - action: utter_inquiry
-  
+ 
 - story: ask contact
   steps:
   - intent: contact
@@ -104,6 +100,40 @@ stories:
   steps:
   - intent: golang
   - action: utter_golang
+
+- story: ask name
+  steps:
+  - intent: inquiryform
+  - slot_was_set:
+    - name
+  - action: utter_name
+
+- story: ask email
+  steps:
+  - intent: name
+  - slot_was_set:
+    - email
+  - action: utter_email
+
+- story: ask number
+  steps:
+  - intent: email
+  - slot_was_set:
+    - number
+  - action: utter_number
+
+- story: ask description
+  steps:
+  - intent: number
+  - slot_was_set:
+    - description
+  - action: utter_description
+
+- story: ask thanks
+  steps: 
+  - intent: description
+  - action: utter_thanks
+
 
 - story: ask flutter
   steps:

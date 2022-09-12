@@ -20,6 +20,47 @@ nlu:
     -services
     -Technologies
 
+- intent: inquiryform
+  examples: |
+    -I want to fill inquiry form
+    -inquiry form
+    -Can we connect
+
+- intent: number
+  examples: |
+    - 897654321
+    - 123456789
+    - 785643218
+    - 231654987
+    - 564987321
+    - 321654987
+    - 987654321
+
+- intent: name
+  examples: |
+    - divyesh
+    - vijay
+    - abrar
+    - dux
+    - aman
+    - namam
+    - harsh
+
+- intent: email
+  examples: |
+    -abcd@gmail.com
+    -xyz@yahoo.com
+    -pqrs@facebook.com
+
+- intent: description
+  examples: |
+    - i have a project of object detection
+    - i have a project of classification
+    - i want developers of django
+    - i have a project of deep learning
+    - i have a project
+
+
 - intent: affirm
   examples: |
     - Can you brief me about odoo?
@@ -196,10 +237,6 @@ nlu:
   examples: |
     - HomePage
 
-- intent: inquiry
-  examples: |
-    - Inquiry Form
-    - inquiry
 
 - intent: contact
   examples: |
